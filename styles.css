@@ -1,0 +1,57 @@
+whatNeedsToBeWritten
+{
+    position: absolute;
+    left: 100px;
+    top: 130px;
+    width: 130px;
+    height: 140px;
+}
+/*
+box1{
+    position: absolute;
+    left: 100px;
+    top: 130px;
+    width: 130px;
+    height: 300px;
+    border: 10px solid green;
+}
+*/
+  photoUpload
+  {
+     position: absolute;
+    left: 400px;
+    top: 130px;
+    width: 200px;
+    height: 100px;
+  }
+  biasExamplesPosition
+  {
+    position: absolute;
+    right: 200px;
+    top: 130px;
+    width: 100px;
+    height: 140px;
+  }
+  aside {
+    position: absolute;
+    left: 800px;
+    top:130px;
+    width: 100px;
+    height: 140px;
+  }
+  textBoxPosition
+  {
+    position: absolute;
+    left: 1200px;
+    top: 130px;
+    width: 160px;
+    height: 140px;
+  }
+/*
+don't use, I use style="height:200px;font-size:14pt;" instead
+  textboxSize
+  {
+    height:200px;
+    font-size: 14pt;
+  }
+ */
