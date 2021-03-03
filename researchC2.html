@@ -26,9 +26,12 @@
             <td></td>
           </tr>
         </table>
+        <hr size= "3" noshade>
+       
         <whatNeedsToBeWritten>
+          <br>
         <box1>
-          <h2 style="text-align:left"> 1. Please write down each number listed below: </h2>
+          <h3 style="text-align:left"> 1. Please write down each number listed below: </h3>
           <borderBox>
           <ol style="text-align:left">
           <li><big>5</big></li>
@@ -44,7 +47,8 @@
               
          
          <aside> <div style="float: left;margin-right:10px">
-           <h2> 3. Observe these numbers to identify bias from: </h2>
+          <br>
+           <h3> 3. Observe these numbers to identify bias from: </h3>
           <table style="width:15%" "text-align:center" border = '1' align = "left">
           <tr>
             <th><h3>picture 1</h3></th>
@@ -70,34 +74,62 @@
         -->
     
          <photoUpload> 
-        <h2> 2. Upload your file: </h2>
+          <br>
+        <h3> 2. Upload your file: </h3>
         <form action="/action_page.php" style="float: center;margin-right:15px" >
         <input type="file" id="img" name="img" accept="image/*">
-        
+        <input type="submit" value="Send Form" name="submit">
         </form></photoUpload>
     
     
         <!-- second table for images-->
          
         <textBoxPosition>
+          <br>
         <form>
-          <h2>4. Enter in any information about bias you have observed. </h2>
-          <h3>Examples of these are on the left: </h3>
+          <h3>4. Enter in any information about bias you have observed. </h3>
+          <h4>Examples of these are on the right: </h4>
           <!--
           <input type="textarea" style="height:150px;font-size:14pt;"> <input type="submit" value="Submit" >
-          -->
-          <textarea id="w3review" name="w3review" rows="6" cols="40"> </textarea>
-            <br><br>
-            <input type="submit">
-        </form>
-          </textBoxPosition>
+          
+          /*
+          <textarea id="w3review" name="w3review" rows="6" cols="25"> 
+          
+          </textarea>
+        -->
+        <form action=”mailto:sohinithota@gmail.com”
+
+
+        method=”POST”
+        
+        
+        enctype=”multipart/form-data”
+        
+        
+        name=”EmailForm”>
+        
+        
+        Name:<br>
+        
+        
+        <input type=”text” size=”19″ name=”ContactName”><br><br>
+        
+        
+        Message:<br> <textarea name=”ContactCommentt” rows=”6″ cols=”20″>
+        </textarea>
+        <br><br> 
+        <input type="submit" value="Send Form" name="submit"> </form>
+        </textBoxPosition>
         <br>
         <h3></h3>
-          <biasExamplesPosition><h2>Bias examples:</h2>
+          <biasExamplesPosition>
+            <br>
+            <h3>Bias examples:</h3>
+  
             <ul> 
-              <li>Educational Bias</li>
-              <li>Left vs Right Handedness</li>
-              <li>Racial Bias</li>
+              <li><small>Educational Bias</small></li>
+              <li><small>Left vs Right Handedness</small></li>
+              <li><small>Racial Bias</small></li>
         </ul>
         </biasExamplesPosition>
         <br>

@@ -10,10 +10,10 @@ whatNeedsToBeWritten
 box1{
     position: absolute;
     left: 100px;
-    top: 130px;
+    top: 40px;
     width: 130px;
     height: 300px;
-    border: 10px solid green;
+    border: 1px solid green;
 }
 */
   photoUpload
@@ -27,14 +27,14 @@ box1{
   biasExamplesPosition
   {
     position: absolute;
-    right: 200px;
+    right: 120px;
     top: 130px;
     width: 100px;
     height: 140px;
   }
   aside {
     position: absolute;
-    left: 800px;
+    left: 700px;
     top:130px;
     width: 100px;
     height: 140px;
@@ -42,7 +42,7 @@ box1{
   textBoxPosition
   {
     position: absolute;
-    left: 1200px;
+    left: 1000px;
     top: 130px;
     width: 160px;
     height: 140px;
