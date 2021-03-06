@@ -1,3 +1,16 @@
+.column {
+  float: left;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.left, .right {
+  width: 25%;
+}
+
+.middle {
+  width: 50%;
+}
 whatNeedsToBeWritten
 {
     position: absolute;
@@ -24,28 +37,41 @@ box1{
     width: 200px;
     height: 100px;
   }
-  biasExamplesPosition
-  {
-    position: absolute;
-    right: 120px;
-    top: 130px;
-    width: 100px;
-    height: 140px;
-  }
-  aside {
-    position: absolute;
-    left: 700px;
+  
+  pictureID {
+  /*  position: absolute;
+    left: 60px;
     top:130px;
     width: 100px;
     height: 140px;
+    */
+    width: 200px;
+    margin: 0 auto;
+  
   }
   textBoxPosition
   {
+    /*
     position: absolute;
-    left: 1000px;
+    left: 700px;
     top: 130px;
     width: 160px;
     height: 140px;
+    */
+    width: 200px;
+    margin: 0 auto;
+  }
+  biasExamplesPosition
+  {
+    /*
+    position: absolute;
+    left: 500px;
+    top: 0px;
+    width: 100px;
+    height: 140px;
+   */
+    width: 200px;
+    margin: 0 auto;
   }
 /*
 don't use, I use style="height:200px;font-size:14pt;" instead
