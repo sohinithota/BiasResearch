@@ -28,36 +28,58 @@
     width: 100%;
   }
 }
+
+
 </style>
 </head>
 <body>
 
 <h2>Page 1</h2>
 <p></p>
+<h5>Study Instructions:</h5>
+1. Write down numbers 0-9 with black sharpie on separate sheets of white paper. 
+<br>
+<small>&nbsp;&nbsp;&nbsp;&nbsp; You may write 1 number for a compensation of "", or more for ""</small>
+<br>
+2. Take a photo with a camera, cell phone, or other photography device. Upload those 10 images.
+<br>
+3. Select the next button for part 2 of the study.
+<br>
+4. For step 3, click on the provided link and select the "MNIST Dataset"
+<br>
+5. Step 4: Write down and submit any observed biases. Examples of these are on the right side of the screen. 
+
 
 <div class="row">
   <div class="column" style="background-color:#aaa;">
-    <h3 style="text-align:left"> 1. Please write down the numbers 0-9: </h3>        <br>
+    <h3 style="text-align:left"> 1. Write down numbers 0-9 with black sharpie on white paper. Upload those 10 images. </h3>        <br>
       <box1>
         <borderBox>
         <ol style="text-align:left">
+      <!---
         <li><big>5</big></li>
         <li><big>6</big></li>
         <li><big>8</big></li>
         <li><big>7</big></li>
+        -->
       </ol>
       </borderBox>
 
-  <a class="example-image-link" href="exampleImage.jpg" data-lightbox="example-1"><img class="example-image" src="Research/exampleImage" alt="Example Photo"></a>
+  <a class="example-image-link" href="exampleOne.jpg" data-lightbox="example-1"><img class="example-image" src="Research/exampleOne" alt="Example One"></a>
+  <a class="example-image-link" href="exampleFour.jpg" data-lightbox="example-1"><img class="example-image" src="Research/exampleFour" alt="Example Two"></a>
+
   </box1>
   </div>
   
   <div class="column" style="background-color:#bbb;">
-    <h3> 2. Upload your file: </h3>        <br>
-      <form action="/action_page.php" style="float: center;margin-right:15px" >
-      <input type="file" id="img" name="img" accept="image/*">
-      <input type="submit" value="Send Form" name="submit">
-      </form>
+    <h3> 2. Upload your files here: </h3>   
+    <h5> Please press the shift key while selecting your images to select multiple files. </h5> 
+         <br>
+    <form action="/action_page.php">
+      <label for="files">Select files:</label>
+      <input type="file" id="files" name="files" multiple><br><br>
+      <input type="submit">
+    </form>
   
   </div>
 </div>
