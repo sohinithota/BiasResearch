@@ -8,7 +8,7 @@
 }
 
 /* Create three equal columns that floats next to each other */
-.column {
+.tcolumn {
   float: left;
   width: 33.33%;
   padding: 10px;
@@ -16,7 +16,7 @@
 }
 
 /* Clear floats after the columns */
-.row:after {
+.trow:after {
   content: "";
   display: table;
   clear: both;
@@ -27,8 +27,8 @@
 
 <h2>Page 2</h2>
 
-<div class="row">
-  <div class="column" style="background-color:#aaa;">
+<div class="trow">
+  <div class="tcolumn" style="background-color:#aaa;">
             <br>
              <h3> 3. Observe these numbers to identify bias from: </h3>
             <table style="width:15%" "text-align:center" border = '1' align = "left">
@@ -51,7 +51,7 @@
             </tr>
           </table>
   </div>
-  <div class="column" style="background-color:#bbb;">
+  <div class="tcolumn" style="background-color:#bbb;">
         <br>
 
         <form>
@@ -66,7 +66,7 @@
        </form>
     
   </div>
-  <div class="column" style="background-color:#ccc;">
+  <div class="tcolumn" style="background-color:#ccc;">
         <br>
         <h3>Bias examples:</h3>
     
