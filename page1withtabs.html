@@ -1,215 +1,215 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-<style>/* Style the tab */
-.active{
-    display:block !important;
-}
+	<meta charset="utf-8">
+	<style type="text/css">
+		.active{
+			display:block !important;
+		}
 
-    .tab {
-      overflow: hidden;
-      border: 1px solid #ccc;
-      background-color: #f1f1f1;
-    }
-    
-    /* Style the buttons that are used to open the tab content */
-    .tab button {
-      background-color: inherit;
-      float: left;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      padding: 14px 16px;
-      transition: 0.3s;
-    }
-    
-    /* Change background color of buttons on hover */
-    .tab button:hover {
-      background-color: #ddd;
-    }
-    
-    /* Create an active/current tablink class */
-    .tab button.active {
-      background-color: #ccc;
-    }
-    
-    /* Style the tab content */
-    .tabcontent {
-      display: none;
-      padding: 6px 12px;
-      border: 1px solid #ccc;
-      border-top: none;
-    }
-    * {
-  box-sizing: border-box;
-}
+		.tab {
+			overflow: hidden;
+			border: 1px solid #ccc;
+			background-color: #f1f1f1;
+		}
 
-/* Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
-}
+		/* Style the buttons that are used to open the tab content */
+		.tab button {
+			background-color: inherit;
+			float: left;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			padding: 14px 16px;
+			transition: 0.3s;
+		}
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+		/* Change background color of buttons on hover */
+		.tab button:hover {
+			background-color: #ddd;
+		}
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-}
-/*
-tab 2 CSS
-*/
-* {
-  box-sizing: border-box;
-}
+		/* Create an active/current tablink class */
+		.tab button.active {
+			background-color: #ccc;
+		}
 
-/* Create three equal columns that floats next to each other */
-.tcolumn {
-  float: left;
-  width: 33.33%;
-  padding: 10px;
-  height: 600px; /* Should be removed. Only for demonstration */
-}
+		/* Style the tab content */
+		.tabcontent {
+			display: none;
+			padding: 6px 12px;
+			border: 1px solid #ccc;
+			border-top: none;
+		}
+		* {
+			box-sizing: border-box;
+		}
 
-/* Clear floats after the columns */
-.trow:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-    </style>
+		/* Create two equal columns that floats next to each other */
+		.column {
+			float: left;
+			width: 50%;
+			padding: 10px;
+			height: 300px; /* Should be removed. Only for demonstration */
+		}
+
+		/* Clear floats after the columns */
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+		@media screen and (max-width: 600px) {
+			.column {
+				width: 100%;
+			}
+		}
+		/*
+		tab 2 CSS
+		*/
+		* {
+			box-sizing: border-box;
+		}
+
+		/* Create three equal columns that floats next to each other */
+		.tcolumn {
+			float: left;
+			width: 33.33%;
+			padding: 10px;
+			height: 600px; /* Should be removed. Only for demonstration */
+		}
+
+		/* Clear floats after the columns */
+		.trow:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+	</style>
 </head>
 <body>
-<h5>Study Instructions:</h5>
-<ol type = 'I'>
-  <li>Select the tab 'Tab 1'</li>
-  <li>Step 1:Write down numbers 0-9 with black sharpie on separate sheets of white paper. </li>
-  <small>&nbsp;&nbsp;&nbsp;&nbsp; You may write 1 number for a compensation of "", or more for ""</small>
-  <li>Step 2: Take a photo with a camera, cell phone, or other photography device. Upload those 10 images.</li>
-  <li>Select Tab 2 for part 2 of the study.</li>
-  <li>Step 3: click on the provided link and select the "MNIST Dataset"</li>
-  <li>Step 4: Write down and submit any observed biases. Examples of these are on the right side of the screen. </li>
-</ol>
+  <h4>Study Instructions:</h4>
+  <h5>Please do the following: </h5>
+	<ol>
+    <li>Write down numbers 0-9 with black sharpie on separate sheets of white paper. </li>
+		<!--<small>&nbsp;&nbsp;&nbsp;&nbsp; You may write 1 number for a compensation of "", or more for ""</small> -->
+    <li>Take a photo with a camera, cell phone, or other photography device of each number. Upload those 10 images.</li>
+    <small>There are example images below for reference.</small>
+		<li>Click "next" for part 2 of the study.</li>
+		<li>Click on the provided link and select the "MNIST Dataset"</li>
+		<li>Write down and submit any observed biases. Examples of these are below. </li>
+  </ol>
+  <h5>Examples of Bias:</h5>
+  <ul>
+    <li><small>Educational Bias</small></li>
+    <li><small>Left vs Right Handedness</small></li>
+    <li><small>Racial Bias</small></li>
+  </ul>
+	<div class="tab">
+		<!-- Tab content -->
+		<div id="Tab_1" class="tabcontent active">
+			<div class="row">
+				<div class="column" style="background-color:#aaa;">
+					<h3 style="text-align:left"> 1. Write down numbers 0-9 with black sharpie on white paper. Upload those 10 images. </h3>
+					<br>
+					<box1>
 
-
-    <div class="tab">
-        <!--<button class="tablinks" onclick="openStep(event, 'Tab_1')">Tab 1</button>
-        <!--<button class="tablinks" onclick="openStep(event, 'Tab_2')">Tab 2</button>-->
-    </div>
-  
-    <!-- Tab content -->
-    <div id="Tab_1" class="tabcontent active">
-        <div class="row">
-            <div class="column" style="background-color:#aaa;">
-              <h3 style="text-align:left"> 1. Write down numbers 0-9 with black sharpie on white paper. Upload those 10 images. </h3>        <br>
-                <box1>
-          
-            <a class="example-image-link" href="exampleOne.jpg" data-lightbox="example-1" target="_blank"><img class="example-image" src="Research/exampleOne" alt="Example One"></a>
-            <a class="example-image-link" href="exampleFour.jpg" data-lightbox="example-1" target="_blank"><img class="example-image" src="Research/exampleFour" alt="Example Two"></a>
-            </box1>
-          </div>
-            <div class="column" style="background-color:#bbb;">
-                <h3> 2. Upload your files here: </h3>   
-                <h5> Please press the shift key while selecting your images to select multiple files. </h5> 
-                     <br>
-              <div>
-                <form >
-                  <label for="files">Select files:</label>
-                  <input type="file" id="files" name="files" multiple><br><br>
-                  <input type="submit">
-                </form>
-                
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-
-
-
-
-      <button onclick= "openStep(event, 'Tab_1')">Previous</button>
-      <button onclick="openStep(event, 'Tab_2')">Next</button>
-      <div id="Tab_2" class="tabcontent"> 
-        <div class="trow">
-            <div class="tcolumn" style="background-color:#aaa;">
-                      <br>
-                       <h3> 3. Observe these numbers to identify bias from: </h3>
-                       <a href="https://projector.tensorflow.org/" target="_blank">MNIST Dataset Location</a>
-                      <table style="width:15%" "text-align:center" border = '1' align = "left">
-                      <tr>
-                        <th><h3>picture 1</h3></th>
-                        <th><h3>picture 2</h3></th>    
-                      </tr>
-                      <tr>
-                        <td style="text-align:center"> <img src="https://conx.readthedocs.io/en/latest/_images/MNIST_6_0.png" alt="four" width="100" height="100"> </td>
-                        <td style="text-align:center"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRleTteAHFuqkITVqaLaYDlaedsuP5LeuQMUw&usqp=CAU" alt="four" width="100" height="100"></td>
-                    </tr>
-                    </tr>
-                    <tr>
-                        <th><h3>picture 3</h3></th>
-                        <th><h3>picture 4</h3></th>
-                      </tr>
-                      <tr>
-                        <td style="text-align:center"><img src="https://miro.medium.com/max/490/1*G_D__blNITuCTq9Ww9WQdg.png" alt="four" width="100" height="100"</td>
-                        <td style="text-align:center"><img src="https://www.mlprojecttutorials.com/images/mnist/example.png" alt="four" width="100" height="100"</td>
-                      </tr>
-                    </table>
-            </div>
-            <div class="tcolumn" style="background-color:#bbb;">
-                <br>
-        
-                <form>
-                  <br />
-                  <h3>4. Enter in any information about bias you have observed. </h3>
-                  <h4>Examples of these are on the right: </h4>
-                  <textarea rows = "5" cols = "50" name = "description">
-                   
-                            </textarea>
-                  
-                  <input type = "submit" value = "submit" />
-               </form>
+            <!--<a class="example-image-link" href="exampleOne.jpg" data-lightbox="example-1" target="_blank"><img class="example-image" src="Research/exampleOne" alt="Example One"></a> -->
+            <h5>Example 1: &emsp;&emsp;&ensp; Example 2:</h5>
+            <img href = "exampleOne.jpg"src="exampleOne.jpg" alt="Example One" width="100" height="120" alt = "Example One">
+            <!--<a class="example-image-link" href="exampleFour.jpg" data-lightbox="example-1" target="_blank"><img class="example-image" src="Research/exampleFour" alt="Example Two"></a>-->
             
-          </div>
-          <div class="tcolumn" style="background-color:#ccc;">
-            <br>
-            <h3>Bias examples:</h3>
-        
-            <ul> 
-              <li><small>Educational Bias</small></li>
-              <li><small>Left vs Right Handedness</small></li>
-              <li><small>Racial Bias</small></li>
-        </ul>
-        </div>
-      </div>
-      
-     
-      <script>
-        function openStep(evt, cityName) {
-          var i, tabcontent, tablinks;
-          tabcontent = document.getElementsByClassName("tabcontent");
-          for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-          }
-          tablinks = document.getElementsByClassName("tablinks");
-          for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-          }
-          document.getElementById(cityName).style.display = "block";
-          evt.currentTarget.className += " active";
-        }
-        </script>
+            <img href = "exampleFour.jpg"src="exampleFour.jpg" alt="Example Two" width="100" height="120" alt = "Example Two">
+					</box1>
+				</div>
+				<div class="column" style="background-color:#bbb;">
+					<h3> 2. Upload your files here: </h3>   
+					<h5> Please press the shift key while selecting your images to select multiple files. </h5> 
+					<br>
+					<div>
+						<form >
+							<label for="files">Select files:</label>
+							<input type="file" id="files" name="files" multiple><br><br>
+							<input type="submit">
+						</form>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div id="Tab_2" class="tabcontent"> 
+			<div class="trow">
+				<div class="column" style="background-color:#aaa;">
+					<br>
+					<h3> 3. Observe these numbers to identify bias from: </h3>
+          <a href="https://projector.tensorflow.org/" target="_blank">MNIST Dataset Location</a>
+          <!--
+					<table style="width:15%" "text-align:center" border = '1' align = "left">
+						<tr>
+							<th><h3>picture 1</h3></th>
+							<th><h3>picture 2</h3></th>    
+						</tr>
+						<tr>
+							<td style="text-align:center"> <img src="https://conx.readthedocs.io/en/latest/_images/MNIST_6_0.png" alt="four" width="100" height="100"> </td>
+							<td style="text-align:center"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRleTteAHFuqkITVqaLaYDlaedsuP5LeuQMUw&usqp=CAU" alt="four" width="100" height="100"></td>
+						</tr>
+						<tr>
+							<th><h3>picture 3</h3></th>
+							<th><h3>picture 4</h3></th>
+						</tr>
+						<tr>
+							<td style="text-align:center"><img src="https://miro.medium.com/max/490/1*G_D__blNITuCTq9Ww9WQdg.png" alt="four" width="100" height="100"></td>
+							<td style="text-align:center"><img src="https://www.mlprojecttutorials.com/images/mnist/example.png" alt="four" width="100" height="100"></td>
+						</tr>
+          </table>
+        -->
+				</div>
+				<div class="column" style="background-color:#bbb;">
+					<br>
+
+					<form>
+						<br />
+						<h3>4. Enter in any information about bias you have observed. </h3>
+						<h4>Examples of these are on the right: </h4>
+						<textarea rows = "5" cols = "50" name = "description">
+
+						</textarea>
+
+						<input type = "submit" value = "submit" />
+					</form>
+
+				</div>
+			</div>
+		</div>
+		<button onclick= "openStep(event, 'Tab_1')">Previous</button>
+		<button onclick="openStep(event, 'Tab_2')">Next</button>
+	</div>
+	<script>
+		function openStep(evt, cityName) {
+			if (cityName == "Tab_2"){
+				document.getElementById("Tab_1").classList.remove("active");
+				document.getElementById("Tab_2").classList.add("active");
+			}else{
+				document.getElementById("Tab_2").classList.remove("active");
+				document.getElementById("Tab_1").classList.add("active");
+			}
+			// var i, tabcontent, tablinks;
+			// tabcontent = document.getElementsByClassName("tabcontent");
+			// for (i = 0; i < tabcontent.length; i++) {
+			// 	tabcontent[i].style.display = "none";
+			// }
+			// tablinks = document.getElementsByClassName("tablinks");
+			// for (i = 0; i < tablinks.length; i++) {
+			// 	tablinks[i].className = tablinks[i].className.replace(" active", "");
+			// }
+			// document.getElementById(cityName).style.display = "block";
+			// evt.currentTarget.className += " active";
+		}
+	</script>
 </body>
 </html>
-
