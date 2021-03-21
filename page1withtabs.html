@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-	<meta charset="utf-8">
+  <meta charset="utf-8">
 	<style type="text/css">
-		.active{
+    body{
+      font-family: Helvetica;
+    }	
+	.backgroundBox1
+	{
+		background-color: #aaa;
+	}
+    .active{
 			display:block !important;
 		}
 
@@ -13,7 +19,6 @@
 			border: 1px solid #ccc;
 			background-color: #f1f1f1;
 		}
-
 		/* Style the buttons that are used to open the tab content */
 		.tab button {
 			background-color: inherit;
@@ -42,9 +47,11 @@
 			border: 1px solid #ccc;
 			border-top: none;
 		}
+		/*
 		* {
 			box-sizing: border-box;
 		}
+		*/
 
 		/* Create two equal columns that floats next to each other */
 		.column {
@@ -52,6 +59,8 @@
 			width: 50%;
 			padding: 10px;
 			height: 300px; /* Should be removed. Only for demonstration */
+			box-sizing: border-box;
+			background-color:#bbb;
 		}
 
 		/* Clear floats after the columns */
@@ -59,6 +68,7 @@
 			content: "";
 			display: table;
 			clear: both;
+			box-sizing: border-box;
 		}
 
 		/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
@@ -70,16 +80,15 @@
 		/*
 		tab 2 CSS
 		*/
-		* {
-			box-sizing: border-box;
-		}
-
-		/* Create three equal columns that floats next to each other */
+		/* Create second column, same as column but different background color. used for tasks 2 and 4 */
 		.tcolumn {
 			float: left;
-			width: 33.33%;
+			width: 50%;
 			padding: 10px;
-			height: 600px; /* Should be removed. Only for demonstration */
+			height: 300px;
+			box-sizing: border-box;
+			background-color:#aaa;
+			 /* Should be removed. Only for demonstration */
 		}
 
 		/* Clear floats after the columns */
@@ -92,31 +101,29 @@
 </head>
 <body>
   <h4>Study Instructions:</h4>
-  <h5>Please do the following: </h5>
+  <p>Please do the following:</p>
 	<ol>
-    <li>Write down numbers 0-9 with black sharpie on separate sheets of white paper. </li>
-		<!--<small>&nbsp;&nbsp;&nbsp;&nbsp; You may write 1 number for a compensation of "", or more for ""</small> -->
-    <li>Take a photo with a camera, cell phone, or other photography device of each number. Upload those 10 images.</li>
-    <small>There are example images below for reference.</small>
+		<li>Write down numbers 0-9 with black sharpie on separate sheets of white paper. </li>
+		<li>Take a photo with a camera, cell phone, or other photography device of each number. Upload those 10 images.  There are example images below for reference. </li>
 		<li>Click "next" for part 2 of the study.</li>
-		<li>Click on the provided link and select the "MNIST Dataset"</li>
-		<li>Write down and submit any observed biases. Examples of these are below. </li>
+		<li>Take a look at the table. Select 3 numbers from it to identity . For example: A3, B1, D2.</li>
+		<li> Type up then submit any observed biases from the 3 selected digits of the MNIST dataset sample (on the left). For example, do you think the digits were written by left-handed or right-handed people? Can you observe other biases?</li>
   </ol>
+  <!--
   <h5>Examples of Bias:</h5>
   <ul>
     <li><small>Educational Bias</small></li>
     <li><small>Left vs Right Handedness</small></li>
     <li><small>Racial Bias</small></li>
   </ul>
+-->
 	<div class="tab">
 		<!-- Tab content -->
 		<div id="Tab_1" class="tabcontent active">
 			<div class="row">
-				<div class="column" style="background-color:#aaa;">
-					<h3 style="text-align:left"> 1. Write down numbers 0-9 with black sharpie on white paper. Upload those 10 images. </h3>
-					<br>
+				<div class="column" >
+					<h3 style="text-align:left"> 1. Write down numbers 0-9 with black sharpie on white paper.</h3>
 					<box1>
-
             <!--<a class="example-image-link" href="exampleOne.jpg" data-lightbox="example-1" target="_blank"><img class="example-image" src="Research/exampleOne" alt="Example One"></a> -->
             <h5>Example 1: &emsp;&emsp;&ensp; Example 2:</h5>
             <img href = "exampleOne.jpg"src="exampleOne.jpg" alt="Example One" width="100" height="120" alt = "Example One">
@@ -125,29 +132,24 @@
             <img href = "exampleFour.jpg"src="exampleFour.jpg" alt="Example Two" width="100" height="120" alt = "Example Two">
 					</box1>
 				</div>
-				<div class="column" style="background-color:#bbb;">
+				<div class="tcolumn">
 					<h3> 2. Upload your files here: </h3>   
 					<h5> Please press the shift key while selecting your images to select multiple files. </h5> 
 					<br>
 					<div>
-						<form >
+						<form>
 							<label for="files">Select files:</label>
 							<input type="file" id="files" name="files" multiple><br><br>
-							<input type="submit">
+              <button type="submit"> Upload </button> 
 						</form>
-
 					</div>
 				</div>
 			</div>
 		</div>
-
-
 		<div id="Tab_2" class="tabcontent"> 
-			<div class="trow">
-				<div class="column" style="background-color:#aaa;">
-					<br>
-					<h3> 3. Observe these numbers to identify bias from: </h3>
-          <a href="https://projector.tensorflow.org/" target="_blank">MNIST Dataset Location</a>
+					<div class="column">	
+					<h3> 3. Observe 3 of these numbers to identify bias from: </h3>
+					<img href = "MNISTImage.png"src="MNISTImage.png" alt="MNISTSet" width="350" height="230" alt = "Example One">
           <!--
 					<table style="width:15%" "text-align:center" border = '1' align = "left">
 						<tr>
@@ -168,18 +170,12 @@
 						</tr>
           </table>
         -->
-				</div>
-				<div class="column" style="background-color:#bbb;">
-					<br>
-
-					<form>
-						<br />
-						<h3>4. Enter in any information about bias you have observed. </h3>
-						<h4>Examples of these are on the right: </h4>
+			</div>
+				<div class="tcolumn" >
+            <h3>4. Enter in any information about biases you have observed for your selected letters.</h3>
+			<form>
 						<textarea rows = "5" cols = "50" name = "description">
-
 						</textarea>
-
 						<input type = "submit" value = "submit" />
 					</form>
 
