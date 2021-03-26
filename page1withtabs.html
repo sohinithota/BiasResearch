@@ -56,7 +56,7 @@
 			float: left;
 			width: 50%;
 			padding: 10px;
-			height: 300px; /* Should be removed. Only for demonstration */
+			height: 350px; 
 			box-sizing: border-box;
 			background-color:#bbb;
 		}
@@ -83,7 +83,7 @@
 			float: left;
 			width: 50%;
 			padding: 10px;
-			height: 300px;
+			height: 350px;
 			box-sizing: border-box;
 			background-color:#aaa;
 			 /* Should be removed. Only for demonstration */
@@ -116,7 +116,6 @@
     <li><small>Racial Bias</small></li>
   </ul>
 -->
-	<div class="tab">
 		<!-- Tab content -->
 		<div id="Tab_1" class="tabcontent active">
 			<div class="row">
@@ -145,33 +144,14 @@
 				</div>
 			</div>
 		</div>
+
 		<div id="Tab_2" class="tabcontent"> 
 					<div class="column">	
 					<h3>Part 3. Example images of handwritten digits. </h3>
 					<img href = "MNISTImage.png"src="MNISTImage.png" alt="MNISTSet" width="350" height="230" alt = "Example One">
-          <!--
-			 		<table style="width:15%" "text-align:center" border = '1' align = "left">
-						<tr>
-							<th><h3>picture 1</h3></th>
-							<th><h3>picture 2</h3></th>    
-						</tr>
-						<tr>
-							<td style="text-align:center"> <img src="https://conx.readthedocs.io/en/latest/_images/MNIST_6_0.png" alt="four" width="100" height="100"> </td>
-							<td style="text-align:center"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRleTteAHFuqkITVqaLaYDlaedsuP5LeuQMUw&usqp=CAU" alt="four" width="100" height="100"></td>
-						</tr>
-						<tr>
-							<th><h3>picture 3</h3></th>
-							<th><h3>picture 4</h3></th>
-						</tr>
-						<tr>
-							<td style="text-align:center"><img src="https://miro.medium.com/max/490/1*G_D__blNITuCTq9Ww9WQdg.png" alt="four" width="100" height="100"></td>
-							<td style="text-align:center"><img src="https://www.mlprojecttutorials.com/images/mnist/example.png" alt="four" width="100" height="100"></td>
-						</tr>
-          </table>
-        -->
-			</div>
+					</div>
 				<div class="tcolumn" >
-            <h3>Part 4. Enter in any information about observations you have observed when comparing your handwritten digits.</h3>
+            <h3>Part 4. Enter in any observations from comparing your handwritten digits to our dataset.</h3>
 			<form>
 				Observation 1: <input type="text" name="bias1" required><br>
 				Observation 2: <input type="text" name="bias2"><br>
@@ -183,8 +163,7 @@
 				 <br>
 				<button type="submit">Submit</button><br>
 			</form>
-
-				</div>
+			</div>
 			</div>
 		</div>
 		<button onclick= "openStep(event, 'Tab_1')">Previous</button>
