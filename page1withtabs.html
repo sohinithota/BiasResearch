@@ -21,12 +21,11 @@
 		}
 		/* Style the buttons that are used to open the tab content */
 		.tab button {
-			background-color: inherit;
+			/*background-color: inherit; */
 			float: left;
-			border: none;
 			outline: none;
 			cursor: pointer;
-			padding: 14px 16px;
+			padding: 10px 12px;
 			transition: 0.3s;
 		}
 
@@ -44,7 +43,6 @@
 		.tabcontent {
 			display: none;
 			padding: 6px 12px;
-			border: 1px solid #ccc;
 			border-top: none;
 		}
 		/*
@@ -100,15 +98,15 @@
 	</style>
 </head>
 <body>
-  <h4>Study Instructions:</h4>
-  <p>Please do the following:</p>
+  <h4>Instructions:</h4>
+  <p>This task has four parts. Please do the following:</p>
 	<ol>
 		<li>Write down numbers 0-9 with black sharpie on separate sheets of white paper. </li>
-		<li>Take a photo with a camera, cell phone, or other photography device of each number. Upload those 10 images.  There are example images below for reference. </li>
-		<li>Click "next" for part 2 of the study.</li>
-		<li>Take a look at some example images from our data set in Part 3, and compare them with your own hand writing. How are they similar or different?</li>
-		<li>Type up any observed differences (potential biases of our data set) in Part 4. For example, do you think the digits were written by left-handed or right-handed people? Can you observe other biases? </li>
-		<li> After you finish, click on ”Submit“ to complete this task.</li>
+		<li>Take a photo with a camera, cell phone, or other photography device of each number. Please refer to the examples provided in Part 1 (lower left). Upload those 10 images to Part 2 (lower right).</li>
+		<li>Click on "Next" to proceed.</li>
+		<li>Take a look at some example images from our data set in Part 3, and compare them with your own handwriting. Think about how they are similar and different.</li>
+		<li>Type up any observed differences in part 4. For example, do you think the digits were written by left-handed or right-handed people? At least 1 observation is required, but you can type up a maximum of 3. After, please explain the observations in the provided text area below. </li>
+		<li> When completed, click on ”Submit“ to complete this task.</li>
   </ol>
   <!--
   <h5>Examples of Bias:</h5>
@@ -123,7 +121,7 @@
 		<div id="Tab_1" class="tabcontent active">
 			<div class="row">
 				<div class="column" >
-					<h3 style="text-align:left"> 1. Write down numbers 0-9 with black sharpie on white paper.</h3>
+					<h3 style="text-align:left">Part 1. Write down numbers 0-9 with black sharpie on white paper.</h3>
 					<box1>
             <!--<a class="example-image-link" href="exampleOne.jpg" data-lightbox="example-1" target="_blank"><img class="example-image" src="Research/exampleOne" alt="Example One"></a> -->
             <h5>Example 1: &emsp;&emsp;&ensp; Example 2:</h5>
@@ -134,7 +132,7 @@
 					</box1>
 				</div>
 				<div class="tcolumn">
-					<h3> 2. Upload your files here: </h3>   
+					<h3>Part 2. Upload your files here: </h3>   
 					<h5> Please press the shift key while selecting your images to select multiple files. </h5> 
 					
 					<div>
@@ -149,7 +147,7 @@
 		</div>
 		<div id="Tab_2" class="tabcontent"> 
 					<div class="column">	
-					<h3> 3. Example images of handwritten digits. </h3>
+					<h3>Part 3. Example images of handwritten digits. </h3>
 					<img href = "MNISTImage.png"src="MNISTImage.png" alt="MNISTSet" width="350" height="230" alt = "Example One">
           <!--
 			 		<table style="width:15%" "text-align:center" border = '1' align = "left">
@@ -173,12 +171,18 @@
         -->
 			</div>
 				<div class="tcolumn" >
-            <h3>4. Enter in any information about biases you have observed when comparing your handwritten digits.</h3>
+            <h3>Part 4. Enter in any information about observations you have observed when comparing your handwritten digits.</h3>
 			<form>
-						<textarea rows = "5" cols = "50" name = "description">
-						</textarea>
-						<input type = "submit" value = "submit" />
-					</form>
+				Observation 1: <input type="text" name="bias1" required><br>
+				Observation 2: <input type="text" name="bias2"><br>
+				Observation 3: <input type="text" name="bias3"><br>
+				<label for="biasExplanation">Please explain your observations below:</label>
+				<br>
+				<textarea id="biasExplanation" name="w3review" rows="4" cols="50">
+				 </textarea>
+				 <br>
+				<button type="submit">Submit</button><br>
+			</form>
 
 				</div>
 			</div>
