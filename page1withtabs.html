@@ -151,17 +151,20 @@
 					<img href = "MNISTImage.png"src="MNISTImage.png" alt="MNISTSet" width="350" height="230" alt = "Example One">
 					</div>
 				<div class="tcolumn" >
-            <h3>Part 4. Enter in any observations from comparing your handwritten digits to our dataset.</h3>
+            <h3>Part 4. Enter in any biases from comparing your handwritten digits to our dataset.</h3>
 			<form>
-				Observation 1: <input type="text" name="bias1" required><br>
-				Observation 2: <input type="text" name="bias2"><br>
-				Observation 3: <input type="text" name="bias3"><br>
-				<label for="biasExplanation">Please explain your observations below:</label>
+				Bias 1: <input type="text" name="bias1" class = "bias" required><br>
+				Bias 2: <input type="text" name="bias2" class = "bias"><br>
+				Bias 3: <input type="text" name="bias3" class = "bias"><br>
+				<label><input type="checkbox" name = "noBias" id = "noBiasButton"> I cannot find any biases. </label>
 				<br>
-				<textarea id="biasExplanation" name="w3review" rows="4" cols="50">
+				<br>
+				<label for="biasExplanation" id = "explanationLabel">Please explain your biases below:</label>
+				<br>
+				<textarea id="biasExplanation" name="w3review" rows="4" cols="50" required>
 				 </textarea>
 				 <br>
-				<button type="submit">Submit</button><br>
+				<button id = "submitButton" type="submit">Submit</button><br>
 			</form>
 			</div>
 			</div>
@@ -179,6 +182,40 @@
 				document.getElementById("Tab_1").classList.add("active");
 			}
 		}
+		document.getElementById("noBiasButton").addEventListener("click",function(){
+			if(document.getElementById("noBiasButton").checked==true)
+			{
+				document.getElementById("explanationLabel").innerText = "Explain your reasoning:";
+				document.getElementsByName("bias1")[0].required = true;
+				document.getElementsByName("bias1")[0].disabled = true;
+				document.getElementsByName("bias2")[0].disabled = true;
+				document.getElementsByName("bias3")[0].disabled = true;
+			}
+			else
+			{
+				document.getElementById("explanationLabel").innerText = "Please explain your biases below:";
+				document.getElementsByName("bias1")[0].required = false;
+				document.getElementsByName("bias1")[0].disabled = false;
+				document.getElementsByName("bias2")[0].disabled = false;
+				document.getElementsByName("bias3")[0].disabled = false;
+			}
+
+			
+		})
+		document.getElementById("submitButton").addEventListener("click",function(e)
+		{
+			e.preventDefault();
+			if(document.getElementById("biasExplanation") != "")
+			{
+				document.getElementsByTagName("form")[0].submit();
+			}
+			else{
+				return false;
+			}
+		})
+		
+		
+		
 	</script>
 </body>
 </html>
