@@ -105,7 +105,7 @@
 		<li>Take a photo with a camera, cell phone, or other photography device of each number. Please refer to the examples provided in Part 1 (lower left). Upload those 10 images to Part 2 (lower right).</li>
 		<li>Click on "Next" to proceed.</li>
 		<li>Take a look at some example images from our data set in Part 3, and compare them with your own handwriting. Think about how they are similar and different.</li>
-		<li>Type up any observed differences in part 4. For example, do you think the digits were written by left-handed or right-handed people? At least 1 observation is required, but you can type up a maximum of 3. After, please explain the observations in the provided text area below. </li>
+		<li>Type up any biases you observe in part 4. For example, do you think the digits were written by left-handed or right-handed people? You can type up a maximum of 3. After, please explain the biases in the provided text area below. If you do not observe any biases, select the checkbox and explain why. </li>
 		<li> When completed, click on ”Submit“ to complete this task.</li>
   </ol>
   <!--
@@ -137,7 +137,8 @@
 					<div>
 						<form>
 							<label for="files">Select files:</label>
-							<input type="file" id="files" name="files" multiple><br><br>
+							<input type="file" id="files" name="files" multiple required>
+							<br><br>
               <button type="submit"> Upload </button> 
 						</form>
 					</div>
@@ -159,12 +160,11 @@
 				<label><input type="checkbox" name = "noBias" id = "noBiasButton"> I cannot find any biases. </label>
 				<br>
 				<br>
-				<label for="biasExplanation" id = "explanationLabel">Please explain your biases below:</label>
-				<br>
-				<textarea id="biasExplanation" name="w3review" rows="4" cols="50" required>
-				 </textarea>
-				 <br>
-				<button id = "submitButton" type="submit">Submit</button><br>
+					<label for="biasExplanation" id = "explanationLabel" >Please explain your biases below:</label>
+					<br>
+					<textarea id="biasExplanation" name="w3review" rows="4" cols="50" required = "required"></textarea>
+					<br>
+					<button id = "submitButton" type="submit">Submit</button><br>
 			</form>
 			</div>
 			</div>
@@ -212,10 +212,7 @@
 			else{
 				return false;
 			}
-		})
-		
-		
-		
+		})		
 	</script>
 </body>
 </html>
