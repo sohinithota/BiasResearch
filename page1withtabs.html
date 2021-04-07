@@ -108,14 +108,7 @@
 		<li>Type up any biases you observe in part 4. For example, do you think the digits were written by left-handed or right-handed people? You can type up a maximum of 3. After, please explain the biases in the provided text area below. If you do not observe any biases, select the checkbox and explain why. </li>
 		<li> When completed, click on ”Submit“ to complete this task.</li>
   </ol>
-  <!--
-  <h5>Examples of Bias:</h5>
-  <ul>
-    <li><small>Educational Bias</small></li>
-    <li><small>Left vs Right Handedness</small></li>
-    <li><small>Racial Bias</small></li>
-  </ul>
--->
+
 		<!-- Tab content -->
 		<div id="Tab_1" class="tabcontent active">
 			<div class="row">
@@ -154,15 +147,15 @@
 				<div class="tcolumn" >
             <h3>Part 4. Enter in any biases from comparing your handwritten digits to our dataset.</h3>
 			<form>
-				Bias 1: <input type="text" name="bias1" class = "bias" required><br>
-				Bias 2: <input type="text" name="bias2" class = "bias"><br>
-				Bias 3: <input type="text" name="bias3" class = "bias"><br>
+				Bias 1: <input type="text" name="bias1" class = "bias" required/><br>
+				Bias 2: <input type="text" name="bias2" class = "bias"/><br>
+				Bias 3: <input type="text" name="bias3" class = "bias"/><br>
 				<label><input type="checkbox" name = "noBias" id = "noBiasButton"> I cannot find any biases. </label>
 				<br>
 				<br>
 					<label for="biasExplanation" id = "explanationLabel" >Please explain your biases below:</label>
 					<br>
-					<textarea id="biasExplanation" name="w3review" rows="4" cols="50" required = "required"></textarea>
+					<textarea id="biasExplanation" name="explanation" rows="4" cols="50" required></textarea>
 					<br>
 					<button id = "submitButton" type="submit">Submit</button><br>
 			</form>
