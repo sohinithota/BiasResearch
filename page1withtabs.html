@@ -206,6 +206,7 @@
 				return false;
 			}
 		})
+		//js for button disabling in tab 2-- https://flexiple.com/disable-button-javascript/
 		let input = document.querySelector(".input");
 		let button = document.querySelector(".button");
 
@@ -214,12 +215,18 @@
 		input.addEventListener("change", stateHandle);
 
 		function stateHandle() {
+			
   		if (document.querySelector(".input").value === "") {
     		button.disabled = true; //button remains disabled
   		} 
+		/*
+		if (document.getElementsByName("bias1")[0].value !== "") {
+    		button.disabled = false; //button remains disabled
+  		} 
+		  */
 		else if(document.querySelector(".bias").value === "")
 		{
-			button.disabled = true; //button remains disabled
+			button.disabled = false; //button remains disabled
 		}
 		  else {
     	button.disabled = false; //button is enabled
