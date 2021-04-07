@@ -153,11 +153,11 @@
 				<label><input type="checkbox" name = "noBias" id = "noBiasButton"> I cannot find any biases. </label>
 				<br>
 				<br>
-					<label for="biasExplanation" id = "explanationLabel" >Please explain your biases below:</label>
-					<br>
-					<textarea id="biasExplanation" name="explanation" rows="4" cols="50" required></textarea>
-					<br>
-					<button id = "submitButton" type="submit">Submit</button><br>
+				<label for="biasExplanation" id = "explanationLabel" >Please explain your biases below:</label>
+				<br>
+				<textarea id="biasExplanation" class = "input" name="explanation" rows="4" cols="50" required></textarea>
+				<br>
+				<button class = "button" id = "submitButton" type="submit">Submit</button><br>
 			</form>
 			</div>
 			</div>
@@ -205,7 +205,26 @@
 			else{
 				return false;
 			}
-		})		
+		})
+		let input = document.querySelector(".input");
+		let button = document.querySelector(".button");
+
+		button.disabled = true; //setting button state to disabled
+
+		input.addEventListener("change", stateHandle);
+
+		function stateHandle() {
+  		if (document.querySelector(".input").value === "") {
+    		button.disabled = true; //button remains disabled
+  		} 
+		else if(document.querySelector(".bias").value === "")
+		{
+			button.disabled = true; //button remains disabled
+		}
+		  else {
+    	button.disabled = false; //button is enabled
+  		}
+}		
 	</script>
 </body>
 </html>
