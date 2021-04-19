@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+	<style type="text/css">
+    body{
+      font-family: Helvetica;
+    }	
+	.backgroundBox1
+	{
+		background-color: #aaa;
+	}
+    .active{
+			display:block !important;
+		}
+
+		.tab {
+			overflow: hidden;
+			border: 1px solid #ccc;
+			background-color: #f1f1f1;
+		}
+		/* Style the buttons that are used to open the tab content */
+		.tab button {
+			/*background-color: inherit; */
+			float: left;
+			outline: none;
+			cursor: pointer;
+			padding: 10px 12px;
+			transition: 0.3s;
+		}
+
+		/* Change background color of buttons on hover */
+		.tab button:hover {
+			background-color: #ddd;
+		}
+
+		/* Create an active/current tablink class */
+		.tab button.active {
+			background-color: #ccc;
+		}
+
+		/* Style the tab content */
+		.tabcontent {
+			display: none;
+			padding: 6px 12px;
+			border-top: none;
+		}
+		/*
+		* {
+			box-sizing: border-box;
+		}
+		*/
+
+		/* Create two equal columns that floats next to each other */
+		.column {
+			float: left;
+			width: 50%;
+			padding: 10px;
+			height: 375px; 
+			box-sizing: border-box;
+			background-color:#bbb;
+		}
+
+		/* Clear floats after the columns */
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
+			box-sizing: border-box;
+		}
+
+		/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+		@media screen and (max-width: 600px) {
+			.column {
+				width: 100%;
+			}
+		}
+		/*
+		tab 2 CSS
+		*/
+		/* Create second column, same as column but different background color. used for tasks 2 and 4 */
+		.tcolumn {
+			float: left;
+			width: 50%;
+			padding: 10px;
+			height: 375px;
+			box-sizing: border-box;
+			background-color:#aaa;
+			 /* Should be removed. Only for demonstration */
+		}
+
+		/* Clear floats after the columns */
+		.trow:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+  <h4>Instructions:</h4>
+  <p>This task has four parts. Please do the following:</p>
+	<ol>
+		<li>Write down numbers 0-9 with black sharpie on separate sheets of white paper. </li>
+		<li>Take a photo with a camera, cell phone, or other photography device of each number. Please refer to the examples provided in Part 1 (lower left). Upload those 10 images to Part 2 (lower right).</li>
+		<li>Click on "Next" to proceed.</li>
+		<li>Take a look at some example images from our data set in Part 3, and compare them with your own handwriting. Think about how they are similar and different.</li>
+		<li>Type up any biases you observe in part 4. For example, do you think the digits were written by left-handed or right-handed people? You can type up a maximum of 3. After, please explain the biases in the text area. If you do not observe any biases, select the checkbox and explain why. </li>
+		<li> When completed, click on ”Submit“ to complete this task.</li>
+  </ol>
+
+		<!-- Tab content -->
+		<div id="Tab_1" class="tabcontent active">
+			<div class="row">
+				<div class="column" >
+					<h3 style="text-align:left">Part 1. Write down numbers 0-9 with black sharpie on white paper.</h3>
+					<box1>
+            <!--<a class="example-image-link" href="exampleOne.jpg" data-lightbox="example-1" target="_blank"><img class="example-image" src="Research/exampleOne" alt="Example One"></a> -->
+            <h4>Example 1: &emsp; Example 2:</h4>
+            <img href = "exampleOne.jpg"src="exampleOne.jpg" alt="Example One" width="100" height="120" alt = "Example One">
+            <!--<a class="example-image-link" href="exampleFour.jpg" data-lightbox="example-1" target="_blank"><img class="example-image" src="Research/exampleFour" alt="Example Two"></a>-->
+            
+            <img href = "exampleFour.jpg"src="exampleFour.jpg" alt="Example Two" width="100" height="120" alt = "Example Two">
+					</box1>
+				</div>
+				<div class="tcolumn">
+					<h3>Part 2. Upload your files here: </h3>   
+					<h4> Please press the shift key while selecting your images to select multiple files. </h4> 
+					
+					<div>
+						<form>
+							<label for="files">Select files:</label>
+							<input type="file" id="files" name="files" multiple required>
+							<br><br>
+              <button type="submit"> Upload </button> 
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="Tab_2" class="tabcontent"> 
+					<div class="column">	
+					<h3>Part 3. Example images of handwritten digits. </h3>
+					<img href = "MNISTImage.png"src="MNISTImage.png" alt="MNISTSet" width="350" height="230" alt = "Example One">
+					</div>
+				<div class="tcolumn" >
+			<h3>Part 4. Enter in any biases from comparing your handwritten digits to our dataset.</h3>
+			<h4>Please enter at least 1 bias and explain it. If you don't observe any biases check the box and explain why.</h4>
+			<form>
+				Bias 1: <input type="text" name="bias1" class = "bias" required autocomplete="off"/><br>
+				Bias 2: <input type="text" name="bias2" class = "bias" autocomplete="off"/><br>
+				Bias 3: <input type="text" name="bias3" class = "bias" autocomplete="off"/><br>
+				<label><input type="checkbox" name = "noBias" id = "noBiasButton"> I cannot find any biases. </label>
+				<br>
+				<br>
+				<label for="biasExplanation" id = "explanationLabel" >Please explain your biases below:</label>
+				<br>
+				<textarea id="biasExplanation" class = "inputText" name="explanation" rows="4" cols="50" required autocomplete="off"></textarea>
+				<br>
+                <!--<button class = "button" id = "submitButton" type="submit">Submit</button><br> -->
+                <input type="submit" id="submitButton" class="btn btn-primary" value="Submit">
+			</form>
+			</div>
+			</div>
+		</div>
+		<button onclick= "openStep(event, 'Tab_1')">Previous</button>
+		<button onclick="openStep(event, 'Tab_2')">Next</button>
+	</div>
+	<script>
+		function openStep(evt, cityName) {
+			if (cityName == "Tab_2"){
+				document.getElementById("Tab_1").classList.remove("active");
+				document.getElementById("Tab_2").classList.add("active");
+			}else{
+				document.getElementById("Tab_2").classList.remove("active");
+				document.getElementById("Tab_1").classList.add("active");
+			}
+		}
+		document.getElementById("noBiasButton").addEventListener("click",function(){
+			if(document.getElementById("noBiasButton").checked==true)
+			{
+				document.getElementById("explanationLabel").innerText = "Explain your reasoning:";
+				document.getElementsByName("bias1")[0].required = true;
+				document.getElementsByName("bias1")[0].disabled = true;
+				document.getElementsByName("bias2")[0].disabled = true;
+				document.getElementsByName("bias3")[0].disabled = true;
+			}
+			else
+			{
+				document.getElementById("explanationLabel").innerText = "Please explain your biases below:";
+				document.getElementsByName("bias1")[0].required = false;
+				document.getElementsByName("bias1")[0].disabled = false;
+				document.getElementsByName("bias2")[0].disabled = false;
+				document.getElementsByName("bias3")[0].disabled = false;
+			}
+
+			
+		})
+		document.getElementById("submitButton").addEventListener("click",function(e)
+		{
+			e.preventDefault();
+			if(document.getElementById("biasExplanation") != "")
+			{
+				document.getElementsByTagName("form")[0].submit();
+			}
+			else{
+				return false;
+			}
+		})
+		//js for button disabling in tab 2-- https://flexiple.com/disable-button-javascript/
+		let input = document.querySelector(".inputText");
+		let button = document.querySelector(".submitButton");
+		button.disabled = true; //setting button state to disabled
+
+		input.addEventListener("change", stateHandle);
+
+		function stateHandle() {
+			
+  		if (document.querySelector(".inputText").value === "") {
+    		button.disabled = true; //button remains disabled
+  		} 
+		/*
+		if (document.getElementsByName("bias1")[0].value !== "") {
+    		button.disabled = false; //button remains disabled
+  		} 
+		  */
+		else if(document.querySelector(".bias").value === "")
+		{
+			button.disabled = false; //button remains disabled
+		}
+		else {
+    	button.disabled = false; //button is enabled
+  		}
+}		
+	</script>
+</body>
+</html>
